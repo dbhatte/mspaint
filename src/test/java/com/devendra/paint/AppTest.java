@@ -1,4 +1,4 @@
-package com.devendra.paintProgram;
+package com.devendra.paint;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
