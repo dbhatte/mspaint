@@ -10,6 +10,7 @@ import com.devendra.paint.command.ICommandReader;
 import com.devendra.paint.command.commands.CreateCanvasCommand;
 import com.devendra.paint.command.commands.LineCommand;
 import com.devendra.paint.command.commands.QuitCommand;
+import com.devendra.paint.command.commands.RectangleCommand;
 import com.devendra.paint.command.enums.CommandReaderEnum;
 import com.devendra.paint.engine.IPaintEngine;
 import com.devendra.paint.engine.PaintEngine;
@@ -26,6 +27,7 @@ public class App
 		commandReader.setCommandParser(commandParser);
 		commandParser.registerCommands("C", new CreateCanvasCommand(scanner));
 		commandParser.registerCommands("L", new LineCommand(scanner));
+		commandParser.registerCommands("R", new RectangleCommand(scanner));
 		commandParser.registerCommands("Q", new QuitCommand());
 		commandParser.setScanner(scanner);
 		while (true) {
