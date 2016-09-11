@@ -18,10 +18,21 @@ public class PaintEngine implements IPaintEngine {
 
 	@Override
 	public void executeCommand(ICommand command) {
+		if (command == null) {
+			System.out.println("Please retry with correct input");
+			return;
+		}
 		if (command instanceof NeedsCanvas) {
 			((NeedsCanvas) command).setCanvas(canvas);
 		}
-		command.execute();
+		try {
+			command.execute();
+		} catch (final RuntimeException e) {
+			System.out.println("Error Occurred:" + e.getMessage());
+
+			System.out.println("Please retry with correct input");
+
+		}
 		canvas.draw();
 	}
 
