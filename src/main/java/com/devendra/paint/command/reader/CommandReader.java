@@ -1,5 +1,6 @@
-package com.devendra.paint.command;
+package com.devendra.paint.command.reader;
 
+import com.devendra.paint.command.ICommandParser;
 import com.devendra.paint.command.enums.CommandReaderEnum;
 
 public abstract class CommandReader implements ICommandReader{

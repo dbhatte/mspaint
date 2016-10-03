@@ -3,16 +3,16 @@ package com.devendra.paint;
 import java.util.Scanner;
 
 import com.devendra.paint.command.CommandParser;
-import com.devendra.paint.command.CommandReader;
 import com.devendra.paint.command.ICommand;
 import com.devendra.paint.command.ICommandParser;
-import com.devendra.paint.command.ICommandReader;
 import com.devendra.paint.command.commands.BucketFillCommand;
 import com.devendra.paint.command.commands.CreateCanvasCommand;
 import com.devendra.paint.command.commands.LineCommand;
 import com.devendra.paint.command.commands.QuitCommand;
 import com.devendra.paint.command.commands.RectangleCommand;
 import com.devendra.paint.command.enums.CommandReaderEnum;
+import com.devendra.paint.command.reader.CommandReader;
+import com.devendra.paint.command.reader.ICommandReader;
 import com.devendra.paint.engine.IPaintEngine;
 import com.devendra.paint.engine.PaintEngine;
 
